@@ -1,0 +1,45 @@
+@use '../../theme/variables' as *;
+
+.todo {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-radius: 1.8rem;
+  background-color: $white-col;
+  box-shadow: $todo-box-col 0 0.1rem 0.4rem;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  &__title {
+    margin-left: 1rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: $black-col;
+  }
+  &__completed {
+    &:checked + h3 {
+      text-decoration: line-through;
+    }
+  }
+  &__desc {
+    width: 95%;
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+  &__rm-btn {
+    padding: 1rem;
+    height: 3rem;
+    font-size: 3rem;
+    line-height: 1rem;
+    border-radius: 1.2rem;
+    background-color: $red-col;
+    color: $white-col;
+  }
+}

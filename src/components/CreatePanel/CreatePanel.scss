@@ -1,0 +1,41 @@
+@use '../../theme/variables' as *;
+
+.create-panel {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-top: 4rem;
+  }
+  &__input {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    display: block;
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+    border: 0;
+    border-bottom: 0.3rem solid $primary-col;
+    background-color: transparent;
+    color: $primary-col;
+    transition: 0.3s cubic-bezier(0.64, 0.09, 0.08, 1) all;
+    &:focus-visible {
+      background-color: $darker-col;
+      outline: none;
+    }
+    &::placeholder {
+      color: $primary-col;
+      opacity: 1;
+    }
+  }
+  &__btn {
+    padding: 0 8rem;
+    margin-top: 2rem;
+    align-self: center;
+    background-color: $primary-col;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 0.4rem 1rem 0 $btn-shadow-col;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@use './theme/variables' as *;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  padding: 0 1.5rem;
+  color: $white-col;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.08rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+  outline: none;
+  border: none;
+  user-select: none;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0.2rem 0.5rem 0 $btn-shadow-col;
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-color: $btn-disabled-bg-col;
+    color: $btn-disabled-col;
+    box-shadow: none;
+  }
+}
+
+.App {
+  padding: 3rem 1rem 0;
+  &__title {
+    font-size: 3.2rem;
+    color: $primary-col;
+  }
+}
+
+.container {
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
+}

@@ -1,0 +1,18 @@
+@use '../../theme/variables' as *;
+@use '../../theme/mixins' as *;
+
+.todos-list {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background-color: $darker-col;
+  &__title {
+    font-size: 2.8rem;
+    text-align: center;
+    color: $primary-col;
+    cursor: pointer;
+  }
+  &-transition {
+    @include component-transition;
+  }
+}
